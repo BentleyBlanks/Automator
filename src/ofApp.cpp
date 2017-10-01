@@ -235,7 +235,7 @@ void ofApp::calculating()
                 for(int i = 0; i < 10; i++)
                 {
                     if(i != 9)
-                        resultFile << resultData[i] << ",";
+                        resultFile << percision(resultData[i] / 10000.0f) << ",";
                     else
                         resultFile << resultData[i] << "%";
                 }
@@ -255,7 +255,7 @@ void ofApp::calculating()
         for(int i = 0; i < 10; i++)
         {
             if(i != 9)
-                resultFile << percision(sumData[i]) << ",";
+                resultFile << percision(sumData[i] / 10000.0f) << ",";
             else
                 resultFile << percision(sumData[i]) << "%";
         }
@@ -336,7 +336,7 @@ void ofApp::draw(){
     ImGui::End();
     gui.end();
 
-    ofDrawBitmapString("Ver 1.2 By BB", 570, 650);
+    ofDrawBitmapString("Ver 1.3 By BB", 570, 650);
 }
 
 //--------------------------------------------------------------
